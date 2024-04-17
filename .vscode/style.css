@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inconsolata&family=Inter:wght@500&family=Montserrat:wght@800&family=Sixtyfour&family=Teko:wght@600;700&display=swap');
+
+* { /*resetar a pagina, deixar ela "limpa" pra gente fazer nossas definições*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none; /*tira os tópicos q aparece automaticamente*/
+    border: none;
+    text-decoration: none; /*tira a linha que vem em baixo de um link*/
+    font-family:'Inconsolata', monospace;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    overflow-x: hidden; /*quer dizer que não vai ter barra de rolamento horizontal*/ 
+}
+
+/*menu*/
+
+.content {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #8B4513;
+    /*position: fixed;*/
+    padding-left: 10rem;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.logo h3 {
+    color: white;
+    font-size: 1.6rem;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.content .list-menu {
+    width: 600px;
+    display: flex; /* deixa um do lado do outro */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .list-menu li a {
+    padding: 1rem 1rem 1rem 1rem;
+    color: white;
+    font-size: 1.8rem;
+    text-transform: uppercase; /*deixa as letras maiusculas*/
+    font-weight: 500;
+    transition: all 100ms ease-in;
+}
+
+.content .list-menu li a:hover {
+    background-color: #3333;
+    border-bottom: 4px solid #A0522D;
+    color: 	#DAA520;
+}
+
+.first-section {
+    height: 100vh; /*altura completa da tela*/
+    background-image: linear-gradient(rgba(29, 29, 29, 0.8), rgba(29, 29, 29, 0.8)) ,url(imagens/capa.avif); /*adicionar imagem no fundo da pagina*/
+    background-position: center; /*deixar no centro a imagem*/
+    background-size: cover; /*tamanho do fundo: cover pra pegar o fundo inteiro*/
+    background-repeat: no-repeat; /*não repetir a imagem durante a pagina, ficar ela inteira ate o final*/
+    width: 100vw; /*largura completa da tela*/
+    display: flex; /*deixa os itens um do lado do outro*/
+    flex-direction: column; /*aqui é pra deixar os itens em forma de coluna*/
+    justify-content: center; /*aqui ele está alinhando na horizontal*/
+    align-items: center;
+
+}
+
+.first-section .conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section h1 {
+    color:  #DAA520;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.first-section h2 {
+    color: #DEB887;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.btn button {
+    width: 230px;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #B8860B;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    margin-top: 5rem;
+    transition: all 200ms ease-in;
+}
+
+.btn button:hover { /*houver = se colocar o mouse no botão alguma coisa vai acontecer*/
+    border: 1px solid #B8860B;
+    background-color: transparent;
+    color: #B8860B;
+}
+
+.btn {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pedidos {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #A0522D;
+}
+
+.pedidos h2 {
+    margin-top: 2rem;
+    font-size: 5rem;
+    color: #F4A460;
+    text-transform: uppercase;
+}
+
+.itens {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.itens .info {
+    background-color: #F4A460;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.itens img {
+    width: 100%;
+    height: 200px;
+    cursor: pointer;
+}
+
+.botao button {
+    font-size: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #F4A460;
+    border-radius: 1px;
+    color: #A0522D;
+    transition: all 200ms ease-in;
+}
+
+.botao button:hover { 
+    border: 1px solid;
+    background-color: #F4A460;
+}
+
+.itens .botao {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 43rem;
+}
+
+/*Contatos*/
+
+.contatos {
+    width: 100%;
+    background-color: #A0522D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: #F4A460;
+    padding-bottom: 4rem;
+}
+
+.contatos h3 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.secao-contatos {
+    width: 150px;
+    display: flex;
+    font-size: 2rem;
+}
+
+.secao-contatos i {
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+
+.secao-contatos i:hover {
+    color: #D2691E;
+}
+
